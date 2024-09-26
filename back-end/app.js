@@ -57,6 +57,7 @@ app.get('/messages/:messageId', async (req, res) => {
     })
   }
 })
+
 // a route to handle logging out users
 app.post('/messages/save', async (req, res) => {
   // try to save the message to the database
@@ -76,6 +77,20 @@ app.post('/messages/save', async (req, res) => {
       status: 'failed to save the message to the database',
     })
   }
+})
+
+// hard-coded 'about us' data
+const data = {
+  content: [
+    'Hello! My name is Ele.',
+    "I', double majoring in Computer Science and Mathematics with a minor in Web Programming and Applications.",
+  ],
+  image: 'https://avatars.githubusercontent.com/u/71520504',
+}
+
+// a route to handle sending 'about us' data
+app.get('/about', (req, res) => {
+  res.json(data)
 })
 
 // export the express app we created to make it available to other modules
