@@ -1,0 +1,17 @@
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#content {
+  padding: 30px;
+  width: 350px;
+}
